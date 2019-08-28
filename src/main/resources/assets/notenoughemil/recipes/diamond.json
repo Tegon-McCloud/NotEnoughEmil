@@ -1,0 +1,24 @@
+{
+
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "CCC",
+        "C C",
+        "CCC"
+    ],
+    "key":
+    {
+        "C":
+        {
+            "type": "forge:ore_dict",
+            "ore": "blockCoal"
+        }
+    },
+    "result":
+    {
+        "item": "minecraft:diamond",
+        "count": 1,
+        "data": 0
+    }
+}

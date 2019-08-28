@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "notenoughemil",
+  "name": "Not Enough Emil",
+  "description": "Emil blocks Pog",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["Tegon McCloud"],
+  "credits": "Emil",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
