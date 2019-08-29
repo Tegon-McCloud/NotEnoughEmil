@@ -8,8 +8,10 @@ import net.minecraftforge.oredict.OreDictionary;
 public class ModOreDict {
 	
 	public static void init() {
-		
 		addOre(ModBlocks.blockEmil, 0, "blockEmil");
+		
+		
+		addOre(ModItems.itemEmil, "ingotEmil");
 		
 	}
 	

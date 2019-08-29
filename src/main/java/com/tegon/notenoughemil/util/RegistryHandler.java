@@ -7,6 +7,7 @@ import com.tegon.notenoughemil.init.ModOreDict;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent.Register;
 import net.minecraftforge.fluids.Fluid;
@@ -22,6 +23,7 @@ public class RegistryHandler {
 		ModItems.init();
 		
 		e.getRegistry().registerAll(ModItems.MOD_ITEMS.toArray(new Item[0]));
+		
 		ModOreDict.init();
 	}
 	
@@ -53,8 +55,10 @@ public class RegistryHandler {
 		ModFluids.init();
 		ModFluids.registerFluids();
 		
+		
 		RenderHandler.registerCustomMeshesAndStates();
 		
+
 		
 	}
 	

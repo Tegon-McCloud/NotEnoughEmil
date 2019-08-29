@@ -5,9 +5,11 @@ import java.util.List;
 
 import com.tegon.notenoughemil.fluids.FluidMoltenEmil;
 
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
+import net.minecraftforge.fml.common.event.FMLInterModComms;
 
 public class ModFluids {
 	
@@ -23,6 +25,15 @@ public class ModFluids {
 		for(Fluid f : MOD_FLUIDS) {
 			registerFluid(f);
 		}
+		
+		
+		NBTTagCompound tag = new NBTTagCompound();
+		tag.setString("fluid", fluidMoltenEmil.getName());
+		tag.setString("ore", "Emil");
+		tag.setBoolean("toolforge", true);
+		
+		FMLInterModComms.sendMessage("tconstruct", "integrateSmeltery", tag);
+		
 	}
 	
 	public static void registerFluid(Fluid fluid) {
