@@ -1,15 +1,17 @@
 package com.tegon.notenoughemil.util;
 
 import com.tegon.notenoughemil.init.ModBlocks;
+import com.tegon.notenoughemil.init.ModFluids;
 import com.tegon.notenoughemil.init.ModItems;
 import com.tegon.notenoughemil.init.ModOreDict;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
-import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.RegistryEvent.Register;
+import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 @EventBusSubscriber
@@ -43,6 +45,16 @@ public class RegistryHandler {
 				((IHasModel)b).registerModels();
 			}
 		}
+		
+	}
+	
+	
+	public static void preInitRegistries(FMLPreInitializationEvent e) {
+		ModFluids.init();
+		ModFluids.registerFluids();
+		
+		RenderHandler.registerCustomMeshesAndStates();
+		
 		
 	}
 	

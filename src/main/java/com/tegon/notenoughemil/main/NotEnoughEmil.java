@@ -1,9 +1,11 @@
 package com.tegon.notenoughemil.main;
 
 import com.tegon.notenoughemil.proxy.CommonProxy;
+import com.tegon.notenoughemil.util.RegistryHandler;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
+import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -25,8 +27,13 @@ public class NotEnoughEmil
 	
 	public static final CreativeTabs creativeTab = new NEETab("not_enough_emil");
 	
+	static {
+		FluidRegistry.enableUniversalBucket();
+	}
+	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent e) {
+		RegistryHandler.preInitRegistries(e);
 		
 	}
 	

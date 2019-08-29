@@ -6,3 +6,6 @@ item.emil.name=Emil
 // Blocks
 tile.emil_block.name=Block of Emil
 tile.compressed_emil_block.name=Compressed Block of Emil
+
+// Fluids
+fluid.molten_emil=Molten Emil
