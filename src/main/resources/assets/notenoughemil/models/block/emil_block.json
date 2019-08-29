@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "notenoughemil:blocks/emil_block"
+    }
+}

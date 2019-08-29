@@ -4,16 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.tegon.notenoughemil.items.ItemBase;
+import com.tegon.notenoughemil.items.ItemEmil;
 
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemEgg;
 
 public class ModItems {
 	
 	public static final List<Item> MOD_ITEMS = new ArrayList<>();
 	
-	static {
-		new ItemBase("emil");
-	}
+	public static Item itemEmil;
 	
+	public static void init() {
+		itemEmil = new ItemEmil("emil");
+	}
 	
 }
